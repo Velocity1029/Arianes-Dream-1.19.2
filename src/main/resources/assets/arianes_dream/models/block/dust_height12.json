@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/snow_height12",
+  "textures": {
+    "particle": "arianes_dream:block/dust",
+    "texture": "arianes_dream:block/dust"
+  }
+}
