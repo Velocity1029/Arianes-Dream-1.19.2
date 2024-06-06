@@ -1,0 +1,33 @@
+{
+  "parent": "block/block",
+  "display": {
+    "head": {
+      "rotation": [ -60, 0, 0 ],
+      "translation": [ 0, 5, -9],
+      "scale":[ 1, 1, 1]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 0, 0, 0 ],
+      "translation": [ 0, 0, 0],
+      "scale": [ 0.375, 0.375, 0.375 ]
+    }
+  },
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/deepslate_bricks",
+    "texture": "minecraft:block/deepslate_bricks"
+  },
+  "elements": [
+    {   "from": [ 5, 0, 7 ],
+      "to": [ 11, 16, 9 ],
+      "faces": {
+        "down":  { "uv": [ 0, 0, 2, 6 ], "texture": "#texture", "cullface": "down" },
+        "up":    { "uv": [ 0, 0, 2, 6 ], "texture": "#texture" },
+        "north": { "uv": [ 0, 0, 6, 16 ], "texture": "#texture", "cullface": "north" },
+        "south": { "uv": [ 0, 0, 6, 16 ], "texture": "#texture", "cullface": "south" },
+        "west":  { "uv": [ 0, 0, 2, 16 ], "texture": "#texture", "cullface": "west" },
+        "east":  { "uv": [ 0, 0, 2, 16 ], "texture": "#texture", "cullface": "east" }
+      }
+    }
+  ]
+}
