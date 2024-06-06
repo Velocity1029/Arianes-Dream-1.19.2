@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "arianes_dream:block/obelisk_top",
+    "side": "arianes_dream:block/obelisk"
+  }
+}

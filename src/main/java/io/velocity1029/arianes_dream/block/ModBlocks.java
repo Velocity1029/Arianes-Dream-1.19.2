@@ -24,6 +24,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DUST;
     public static final RegistryObject<Block> DUST_BLOCK;
     public static final RegistryObject<Block> OUTCROPPING;
+    public static final RegistryObject<Block> OBELISK;
 
     static {
         TESSERACT = registerBlock("tesseract", () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST).strength(10,400)));
@@ -32,6 +33,7 @@ public class ModBlocks {
         })));
         DUST_BLOCK = registerBlock("dust_block", () -> new SandBlock(11098145, BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_RED).strength(0.2F,10).requiresCorrectToolForDrops().sound(SoundType.SAND)));
         OUTCROPPING = registerBlock("outcropping", () -> new Outcropping(BlockBehaviour.Properties.of(Material.METAL).strength(10,40).requiresCorrectToolForDrops().sound(SoundType.METAL).dynamicShape().noOcclusion()));
+        OBELISK = registerBlock("obelisk", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(10,40).requiresCorrectToolForDrops().sound(SoundType.METAL)));
     }
 
     public static void register(IEventBus eventBus) {
