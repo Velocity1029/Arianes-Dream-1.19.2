@@ -21,13 +21,15 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
     public static final RegistryObject<Block> TESSERACT;
-    public static final RegistryObject<Block> DUST_LAYER;
+    public static final RegistryObject<Block> DUST;
     public static final RegistryObject<Block> DUST_BLOCK;
 
     static {
-        TESSERACT = registerBlock("tesseract", () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST).explosionResistance(100)));
-        DUST_LAYER = registerBlock("dust_layer", () -> new SnowLayerBlock(BlockBehaviour.Properties.of(Material.TOP_SNOW).sound(SoundType.SAND)));
-        DUST_BLOCK = registerBlock("dust_block", () -> new SandBlock(11098145, BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_RED).strength(0.5F,10).sound(SoundType.SAND)));
+        TESSERACT = registerBlock("tesseract", () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST).strength(10,400)));
+        DUST = registerBlock("dust", () -> new SnowLayerBlock(BlockBehaviour.Properties.of(Material.TOP_SNOW).strength(0.1F,10).requiresCorrectToolForDrops().sound(SoundType.SAND).isViewBlocking((state, p_187418_, p_187419_) -> {
+            return (Integer)state.getValue(SnowLayerBlock.LAYERS) >= 8;
+        })));
+        DUST_BLOCK = registerBlock("dust_block", () -> new SandBlock(11098145, BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_RED).strength(0.2F,10).requiresCorrectToolForDrops().sound(SoundType.SAND)));
     }
 
     public static void register(IEventBus eventBus) {

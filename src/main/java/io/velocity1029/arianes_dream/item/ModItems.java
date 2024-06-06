@@ -2,11 +2,7 @@ package io.velocity1029.arianes_dream.item;
 
 import io.velocity1029.arianes_dream.block.ModBlocks;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,13 +18,13 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     public static final RegistryObject<Item> TESSERACT;
-    public static final RegistryObject<Item> DUST_LAYER;
+    public static final RegistryObject<Item> DUST;
     public static final RegistryObject<Item> DUST_BLOCK;
     public static final RegistryObject<Item> METALLIC_DUST;
 
     static {
         TESSERACT = registerItem("tesseract", () -> new Item(new Item.Properties().tab(MOD_TAB)));//() -> new BlockItem(TESSERACT.get(), new Item.Properties().tab(MOD_TAB)));
-        DUST_LAYER = registerItem("dust_layer", () -> new BlockItem(ModBlocks.DUST_LAYER.get(), new Item.Properties().tab(MOD_TAB)));
+        DUST = registerItem("dust", () -> new BlockItem(ModBlocks.DUST.get(), new Item.Properties().tab(MOD_TAB)));
         DUST_BLOCK = registerItem("dust_block", () -> new BlockItem(ModBlocks.DUST_BLOCK.get(), new Item.Properties().tab(MOD_TAB)));
         METALLIC_DUST = registerItem("metallic_dust", () -> new Item(new Item.Properties().tab(MOD_TAB)));
     }
