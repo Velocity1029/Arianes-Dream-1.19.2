@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import io.velocity1029.arianes_dream.block.ModBlocks;
 import io.velocity1029.arianes_dream.item.ModItems;
 import io.velocity1029.arianes_dream.painting.ModPaintings;
+import io.velocity1029.arianes_dream.worldgen.biome.ModBiomes;
+import io.velocity1029.arianes_dream.worldgen.dimension.ModDimensions;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -37,9 +39,12 @@ public class ArianesDream
 
         ModBlocks.register(bus);
         ModItems.register(bus);
+
         ModPaintings.register(bus);
 
-        // Register the commonSetup method for modloading
+        ModBiomes.register(bus);
+        ModDimensions.register();
+
         bus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
